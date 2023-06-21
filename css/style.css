@@ -240,6 +240,7 @@ header .navbar a:hover{
     font-size: 1.7rem;
     padding: 1rem 0;
     line-height: 2;
+    text-transform: lowercase;	
 }
 
 .about .row .content .box-container{
