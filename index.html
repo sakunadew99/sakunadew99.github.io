@@ -53,10 +53,7 @@
         <div class="content">
           <h3>my name is <span>sakuna dewanarayana</span></h3>
           <p class="info">
-            Highly motivated Computer Science student with a passion for
-            innovation seeking to join a dynamic team. Eager to apply and
-            enhance software development skills while embracing challenges and
-            growing professionally.
+            I'm a passionate full-stack developer who thrives on building seamless web applications.  Whether it's designing user-friendly interfaces with React.js or crafting robust back-end logic with Node.js and Spring Boot, I enjoy tackling all aspects of the development journey.  My toolbox also includes the classics: HTML, CSS, JavaScript, and Java.
           </p>
           <div class="box-container">
             <div class="box">
@@ -85,7 +82,7 @@
               </p>
             </div>
           </div>
-          <a href="#" class="btn">DOWNLOAD</a>
+          <a href="https://drive.google.com/file/d/1lMvbS9ErbIGS7I1yOoL0aMdKfTtVXZlz/view?usp=sharing" target="_blank" class="btn">DOWNLOAD</a>
         </div>
       </div>
     </section>
@@ -93,15 +90,14 @@
 
     <!--services section starts-->
     <section class="services" id="services">
-      <h1 class="heading"><span>my</span>services</h1>
+      <h1 class="heading"><span>my</span> services</h1>
       <div class="box-container">
         <div class="box">
           <i class="fas fa-code"></i>
-          <h3>web development</h3>
+          <h3>frontend development</h3>
           <p>
-            Web development is the building and maintenance of websites; it's
-            the work that happens behind the scenes to make a website look
-            great, work fast and perform well with a seamless user experience
+            
+Frontend development is the art of crafting the user-facing aspects of websites and web applications. It involves translating design mockups and user experience specifications into interactive, responsive, and visually appealing interfaces that users interact with directly. Frontend developers utilize a combination of programming languages such as HTML, CSS, and JavaScript, along with frameworks and libraries like React, Angular, or Vue.js, to create dynamic and engaging user experiences.
           </p>
         </div>
 
@@ -166,7 +162,7 @@
       <h1 class="heading"><span> my </span>portfolio</h1>
       <div class="box-container">
         <div class="box tilt">
-          <img src="images/portfolio1.jpg" alt="" />
+          <img src="images/port.png" alt="" />
           <div class="content">
             <a href="#" class="btn">learn more</a>
           </div>
@@ -258,20 +254,20 @@
       <h1 class="heading">contact <span>me</span></h1>
       <div class="row">
         <div class="image">
-          <img src="images/contact.gif" alt="" />
+          <img src="images/contact5.gif" alt="" />
         </div>
 
-        <form action="">
+        <form onsubmit="sendEmail(); reset(); return false;" action="" method="POST" />
           <div class="inputBox">
-            <input type="text" placeholder="name" />
-            <input type="email" placeholder="email" />
+            <input type="text" name="Name" id="name" placeholder="name" />
+            <input type="email" name="Email" id="email" placeholder="email" />
           </div>
 
-          <input type="text" placeholder="subject" class="box" />
+          <input type="text" placeholder="subject" id="subject" class="box" />
 
           <textarea
-            name=""
-            id=""
+            name="message"
+            id="message"
             cols="30"
             rows="10"
             placeholder="message"
@@ -295,5 +291,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
 
     <script src="js/script.js"></script>
-  </body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send(
+                {
+                    Host : "smtp.elasticemail.com",
+    Username : "sakunadew99@gmail.com",
+    Password : "3C54BAE13B91B23C088C26FAFD29E2F0D37A",
+    To : 'sakuna.dewanarayan@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : document.getElementById("subject").value,
+    Body : "Name:"+ document.getElementById("name").value + "<br >"+document.getElementById("message").value
+                }
+            ).then(
+  message => alert(message)
+);
+        }
+    </script>
+ 
+</body>
 </html>
