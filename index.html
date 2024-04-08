@@ -94,65 +94,36 @@
       <div class="box-container">
         <div class="box">
           <i class="fas fa-code"></i>
-          <h3>frontend development</h3>
+          <h3>Frontend Development</h3>
           <p>
-            
 Frontend development is the art of crafting the user-facing aspects of websites and web applications. It involves translating design mockups and user experience specifications into interactive, responsive, and visually appealing interfaces that users interact with directly. Frontend developers utilize a combination of programming languages such as HTML, CSS, and JavaScript, along with frameworks and libraries like React, Angular, or Vue.js, to create dynamic and engaging user experiences.
           </p>
         </div>
 
         <div class="box">
-          <i class="fas fa-bullhorn"></i>
-          <h3>SEO marketing</h3>
+          <i class="fas fa-file-code"></i>
+          <h3>Backend Development</h3>
           <p>
-            SEO means Search Engine Optimization and is the process used to
-            optimize a website's technical configuration, content relevance and
-            link popularity so its pages can become easily findable, more
-            relevant and popular towards user search queries, and as a
-            consequence, search engines rank them better.
+            <ul class="service-list">
+              <li>Custom Backend Development: Tailored solutions crafted to match your unique requirements.</li>
+              <li>API Development and Integration:Seamless communication between your applications and third-party platforms.</li>
+              <li>Database Design and Optimization:Efficient management of your data for insights and growth.</li>
+              <li>Performance Tuning and Scalability:Enhancing speed, reliability, and scalability of your backend infrastructure.</li>
+              <li>Security and Compliance:Robust measures to protect your data and ensure regulatory compliance.</li>
+              <li>Continuous Maintenance and Support:Ongoing support to keep your backend infrastructure running smoothly.</li>
+            </ul>
+
+
           </p>
         </div>
 
         <div class="box">
-          <i class="fas fa-paint-brush"></i>
-          <h3>graphic design</h3>
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
           <p>
-            includes the entire process of defining requirements, visualizing
-            and creating graphics including illustrations, logos, layouts and
-            photos
+            Every business is unique, and so are its digital needs. We thrive on challenges and love turning ideas into reality. Whether you require a custom web application or a specialized feature, we're here to bring your vision to fruition.Speed, performance, and SEO are critical factors in today's competitive online space. We optimize your website to load quickly, rank higher in search results, and deliver an exceptional user experience that keeps visitors coming back for more.
           </p>
-        </div>
-
-        <div class="box tilt">
-          <i class="fas fa-envelope"></i>
-          <h3>email design</h3>
-          <p>
-            Email design is all about customizing your emails visually to make
-            them more engaging. This leads to more opens, clickthroughs and
-            conversions.
-          </p>
-        </div>
-
-        <div class="box">
-          <i class="fas fa-phone"></i>
-          <h3>Responsive designs</h3>
-          <p>
-            Responsive design is an approach to web page creation that makes use
-            of flexible layouts, flexible images and cascading style sheet media
-            queries. The goal of responsive design is to build web pages that
-            detect the visitor's screen size and orientation and change the
-            layout accordingly.
-          </p>
-        </div>
-
-        <div class="box">
-          <i class="fas fa-wordpress"></i>
-          <h3>wordpress</h3>
-          <p>
-            On a more technical level, WordPress is a content management system
-            (CMS) written in PHP that uses a MySQL database.
-          </p>
-        </div>
+        </div> 
       </div>
     </section>
     <!--services section ends-->
@@ -164,7 +135,7 @@ Frontend development is the art of crafting the user-facing aspects of websites 
         <div class="box tilt">
           <img src="images/port.png" alt="" />
           <div class="content">
-            <a href="#" class="btn">learn more</a>
+            <a href="https://github.com/sakunadew99/EmployeeManagementSystem-SpringBoot" target="_blank" class="btn">learn more</a>
           </div>
         </div>
 
@@ -183,9 +154,9 @@ Frontend development is the art of crafting the user-facing aspects of websites 
         </div>
 
         <div class="box tilt">
-          <img src="images/p2.jpg" alt="" />
+          <img src="images/port3.png" alt="" />
           <div class="content">
-            <a href="#" class="btn">learn more</a>
+            <a href="https://github.com/sakunadew99/sakunadew99.github.io" target="_blank" class="btn">learn more</a>
           </div>
         </div>
 
@@ -197,9 +168,9 @@ Frontend development is the art of crafting the user-facing aspects of websites 
         </div>
 
         <div class="box tilt">
-          <img src="images/p5.jpg" alt="" />
+          <img src="images/weather.png" alt="" />
           <div class="content">
-            <a href="#" class="btn">learn more</a>
+            <a href="https://github.com/sakunadew99/weather_app_React?tab=readme-ov-file" target="_blank" class="btn">learn more</a>
           </div>
         </div>
       </div>
@@ -278,6 +249,11 @@ Frontend development is the art of crafting the user-facing aspects of websites 
     </section>
     <!--contact section ends-->
 
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p id="popup-message"></p>
+      </div>
+      
     <!--footer section stars-->
     <div class="footer">
       creaed by <span>Sakuna Dewanarayana</span>| all right reserved.
@@ -304,10 +280,19 @@ Frontend development is the art of crafting the user-facing aspects of websites 
     Subject : document.getElementById("subject").value,
     Body : "Name:"+ document.getElementById("name").value + "<br >"+document.getElementById("message").value
                 }
-            ).then(
-  message => alert(message)
-);
+            ).then(function (message) {
+      displayPopup(message);
+    });
         }
+
+        function displayPopup(message) {
+    document.getElementById("popup-message").innerHTML = message;
+    document.getElementById("popup").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
     </script>
  
 </body>

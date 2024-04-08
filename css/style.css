@@ -288,6 +288,10 @@ header .navbar a:hover{
     text-align: center;
 }
 
+.services .box-container .box:hover{
+    transform: scale(1.03);
+}
+
 .services .box-container .box i{
     color: var(--green);
     font-size: 5rem;
@@ -305,6 +309,14 @@ header .navbar a:hover{
     font-size: 1.7rem;
     padding: 1rem 0;
     line-height: 1.5;
+}
+
+.service-list{
+    align-items: start;
+}
+
+.service-list li{
+    font-size: 1.5rem;
 }
 
 .portfolio .box-container{
@@ -497,3 +509,33 @@ header .navbar a:hover{
         font-size: 4rem;
     }
 }
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 5%;
+    top: 5%;
+    transform: translate(-5%, -5%);
+    background-color: var(--tranparent);
+    color: var(--green);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .popup .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .popup .close:hover,
+  .popup .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

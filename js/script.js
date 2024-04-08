@@ -24,9 +24,9 @@ themeToggler.onclick = () =>{
 }
 
 var typed = new Typed('.typing-text',{
-    strings : ['front end developer','web designer','graphic designer','web developer'],
+    strings : ['frontend developer','web designer','backend developer','web developer','fullstack developer'],
     loop : true,
-    typeSpeed : 150
+    typeSpeed : 180
 });
 
 VanillaTilt.init(document.querySelectorAll('.tilt'),{
